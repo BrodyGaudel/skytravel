@@ -1,4 +1,0 @@
-1 1/2/2019 1/2/2019 tunis alger	tunisair economique 5 7 9
-2 1/2/2019 1/2/2019 tunis alger	airfrance economique 30 20 10
-3 1/2/2019 3/2/2019 tunis alger	airfrance economique 30 20 10
-
