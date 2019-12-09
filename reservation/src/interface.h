@@ -5,3 +5,4 @@
 GtkWidget* create_reservations (void);
 GtkWidget* create_affichage (void);
 GtkWidget* create_vol (void);
+GtkWidget* create_modificationvol (void);
