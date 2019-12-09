@@ -1,0 +1,3 @@
+10  chiraton tunis 50 5 5 5 4étoille 20dt 
+12  chiraton Tunis 13 1 1 2019 5étoille 1500dt 
+1  chiratone Tunis 50 1 1 2021 5étoille 4000dt 
