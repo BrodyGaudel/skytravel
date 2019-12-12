@@ -17,7 +17,7 @@
 #include "vol.h"
 
 void
-on_Ajouter_clicked                     (GtkWidget        *objet,
+on_AGAjouter_clicked                     (GtkWidget        *objet,
                                         gpointer         user_data)
 {
 VOL vol;
@@ -25,227 +25,350 @@ VOL vol;
 char *a[30];
 float n;
 
-GtkWidget *Num_vol,*Compagnie_aerienne,*Depart,*Destination,*Date_depart,*Date_retour,*Classe,*Tarif,*Nbr_max,*Confirmation;
-GtkWidget *windowAjout;
+int r,r1;
+int num;
+char ch[30],c[30];
 
-windowAjout=lookup_widget(objet,"windowAjout");
+GtkWidget *Num_vol,*Compagnie_aerienne,*Depart,*Destination,*Date_depart_jour,*Date_depart_mois,*Date_depart_annee,*Date_retour_jour,*Date_retour_mois,*Date_retour_annee,*Classe,*Tarif,*Nbr_max,*Confirmation;
 
-Num_vol=lookup_widget(objet,"num_vol");
-Compagnie_aerienne=lookup_widget(objet,"compagnie_aerienne");
-Depart=lookup_widget(objet,"depart");
-Destination=lookup_widget(objet,"destination");
-Date_depart=lookup_widget(objet,"date_depart");
-Date_retour=lookup_widget(objet,"date_retour");
-Classe=lookup_widget(objet,"classe");
-Tarif=lookup_widget(objet,"tarif");
-Nbr_max=lookup_widget(objet,"nbr_max");
-Confirmation=lookup_widget(objet,"labelConfirmation");
+char erreur[50], *markup; const char *format="<span foreground=\"red\"><b>\%s</b></span>";
+char empty[]="\0";
+
+Num_vol=lookup_widget(objet,"AGnum_vol");
+Compagnie_aerienne=lookup_widget(objet,"AGcompagnie_aerienne");
+Depart=lookup_widget(objet,"AGdepart");
+Destination=lookup_widget(objet,"AGdestination");
+Date_depart_jour=lookup_widget(objet,"AGdate_depart_jour");
+Date_depart_mois=lookup_widget(objet,"AGdate_depart_mois");
+Date_depart_annee=lookup_widget(objet,"AGdate_depart_annee");
+Date_retour_jour=lookup_widget(objet,"AGdate_retour_jour");
+Date_retour_mois=lookup_widget(objet,"AGdate_retour_mois");
+Date_retour_annee=lookup_widget(objet,"AGdate_retour_annee");
+Classe=lookup_widget(objet,"AGclasse");
+Tarif=lookup_widget(objet,"AGtarif");
+Nbr_max=lookup_widget(objet,"AGnbr_max");
+Confirmation=lookup_widget(objet,"AGlabelConfirmation");
 
 vol.num_vol=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Num_vol));
 strcpy(vol.compagnie_aerienne,gtk_entry_get_text(GTK_ENTRY(Compagnie_aerienne)));
 strcpy(vol.depart,gtk_entry_get_text(GTK_ENTRY(Depart)));
 strcpy(vol.destination,gtk_entry_get_text(GTK_ENTRY(Destination)));
-strcpy(vol.date_depart,gtk_entry_get_text(GTK_ENTRY(Date_depart)));
-strcpy(vol.date_retour,gtk_entry_get_text(GTK_ENTRY(Date_retour)));
+vol.date_depart.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_jour));
+vol.date_depart.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_mois));
+vol.date_depart.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_annee));
+vol.date_retour.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_jour));
+vol.date_retour.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_mois));
+vol.date_retour.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_annee));
 strcpy(vol.classe,gtk_combo_box_get_active_text(GTK_COMBO_BOX(Classe)));
 n=strtof(gtk_entry_get_text(GTK_ENTRY(Tarif)),&a);
 vol.tarif=n;
 vol.nbr_max=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Nbr_max));
+num=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Num_vol));
 
-ajouter_vol(vol);
+strcpy(ch,gtk_entry_get_text(GTK_ENTRY(Tarif)));
 
-gtk_label_set_text(GTK_LABEL(Confirmation),"Vol ajoutee");
+r1=AGtest_tarif(ch);
+
+r=AGtest_num_vol(num);
+
+gcvt(vol.tarif,6,c);
+
+if((strcmp(empty,vol.compagnie_aerienne)==0) || (strcmp(empty,vol.destination)==0) || (strcmp(empty,vol.depart)==0) || (strcmp(empty,vol.destination)==0) || (strcmp(empty,c)==0))
+{
+	sprintf(erreur,"* champs obligatoires");
+      markup=g_markup_printf_escaped(format,erreur);
+      gtk_label_set_markup(GTK_LABEL(Confirmation),markup);
+}
+else if(r==1)
+{
+	sprintf(erreur,"Ce numero existe deja");
+      markup=g_markup_printf_escaped(format,erreur);
+      gtk_label_set_markup(GTK_LABEL(Confirmation),markup);
+}
+else if(r1==1)
+{
+	sprintf(erreur,"tarif non valide");
+      markup=g_markup_printf_escaped(format,erreur);
+      gtk_label_set_markup(GTK_LABEL(Confirmation),markup);
+}
+else
+{
+	AGajouter_vol(vol);	
+	sprintf(erreur,"Vol ajoutee");
+	markup=g_markup_printf_escaped(format,erreur);
+	gtk_label_set_markup(GTK_LABEL(Confirmation),markup);
+}
 }
 
 
 void
-on_Afficher_clicked                    (GtkWidget       *objet,
+on_AGAfficher_clicked                    (GtkWidget       *objet,
                                         gpointer         user_data)
 {
 GtkWidget *windowAjout;
 GtkWidget *windowAffichage;
 GtkWidget *treeview1;
 
-windowAjout=lookup_widget(objet,"windowAjout");
+windowAjout=lookup_widget(objet,"AGwindowAjout");
 
 gtk_widget_destroy(windowAjout);
-windowAffichage=lookup_widget(objet,"windowAffichage");
-windowAffichage=create_windowAffichage();
+windowAffichage=lookup_widget(objet,"AGwindowAffichage");
+windowAffichage=create_AGwindowAffichage();
 
 gtk_widget_show(windowAffichage);
 
-treeview1=lookup_widget(windowAffichage,"treeview1");
+treeview1=lookup_widget(windowAffichage,"AGtreeview1");
 
-afficher_vol(treeview1);
+AGafficher_vol(treeview1);
 }
 
 
 void
-on_Retour_clicked                      (GtkWidget       *objet,
+on_AGRetour_clicked                      (GtkWidget       *objet,
                                         gpointer         user_data)
 {
 GtkWidget *windowAjout, *windowAffichage;
 
-windowAffichage = lookup_widget(objet,"windowAffichage");
+windowAffichage = lookup_widget(objet,"AGwindowAffichage");
 
 gtk_widget_destroy(windowAffichage);
-windowAjout = create_windowAjout();
+windowAjout = create_AGwindowAjout();
 gtk_widget_show(windowAjout);
 }
 
 
 void
-on_recherche_clicked                   (GtkWidget       *objet,
+on_AGrecherche_clicked                   (GtkWidget       *objet,
                                         gpointer         user_data)
 {
-GtkWidget *Num_vol,*Compagnie_aerienne,*Depart,*Destination,*Date_depart,*Date_retour,*Classe,*Tarif,*Nbr_max,*Confirmation;
+GtkWidget *Num_vol,*Compagnie_aerienne,*Depart,*Destination,*Date_depart_jour,*Date_depart_mois,*Date_depart_annee,*Date_retour_jour,*Date_retour_mois,*Date_retour_annee,*Classe,*Tarif,*Nbr_max,*output;
+
+GtkWidget *windowModifier;
 
 VOL vol;
 
 int num_volR;
 
-char c1[30],c2[30];
+char c1[30],c2[30],c3[30],c4[30],c5[30],c6[30],c7[30],c8[30];
 
-Num_vol=lookup_widget(objet,"num_volM");
-Compagnie_aerienne=lookup_widget(objet,"compagnie_aerienneM");
-Depart=lookup_widget(objet,"departM");
-Destination=lookup_widget(objet,"destinationM");
-Date_depart=lookup_widget(objet,"date_departM");
-Date_retour=lookup_widget(objet,"date_retourM");
-Classe=lookup_widget(objet,"classeM");
-Tarif=lookup_widget(objet,"tarifM");
-Nbr_max=lookup_widget(objet,"nbr_maxM");
+char erreur[50], *markup; const char *format="<span foreground=\"red\"><b>\%s</b></span>";
+
+Num_vol=lookup_widget(objet,"AGnum_volM");
+Compagnie_aerienne=lookup_widget(objet,"AGcompagnie_aerienneM");
+Depart=lookup_widget(objet,"AGdepartM");
+Destination=lookup_widget(objet,"AGdestinationM");
+Date_depart_jour=lookup_widget(objet,"AGdate_depart_jourM");
+Date_depart_mois=lookup_widget(objet,"AGdate_depart_moisM");
+Date_depart_annee=lookup_widget(objet,"AGdate_depart_anneeM");
+Date_retour_jour=lookup_widget(objet,"AGdate_retour_jourM");
+Date_retour_mois=lookup_widget(objet,"AGdate_retour_moisM");
+Date_retour_annee=lookup_widget(objet,"AGdate_retour_anneeM");
+Classe=lookup_widget(objet,"AGclasseM");
+Tarif=lookup_widget(objet,"AGtarifM");
+Nbr_max=lookup_widget(objet,"AGnbr_maxM");
+output=lookup_widget(objet,"AGlabelConfirmationM");
 
 num_volR=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Num_vol));
 
 FILE *f;
-f=fopen("/home/macbookair/Desktop/try1/src/ListeVol.txt","r"); 
+f=fopen("/home/macbookair/Projects/try/src/catalogue_vol.txt","r"); 
 if (f!=NULL)
 {
-	while (fscanf(f, " %d %s %s %s %s %s %s %f 	%d" ,&vol.num_vol,vol.compagnie_aerienne,vol.depart,vol.destination,vol.date_depart,vol.date_retour,vol.classe,&vol.tarif,&vol.nbr_max)!=EOF)
+while (fscanf(f, " %d %s %s %s %d %d %d %d %d %d %s %f %d		 \n",&vol.num_vol,vol.compagnie_aerienne,vol.depart,vol.destination,&vol.date_depart.jour,&vol.date_depart.mois,&vol.date_depart.annee,&vol.date_retour.jour,&vol.date_retour.mois,&vol.date_retour.annee,vol.classe,&vol.tarif,&vol.nbr_max)!=EOF)
 	{
-		if (num_volR==vol.num_vol)
+		if (num_volR!=vol.num_vol)
 		{   
+			sprintf(erreur,"ce numéro n'éxiste pas");
+			markup=g_markup_printf_escaped(format,erreur);
+			gtk_label_set_markup(GTK_LABEL(output),markup);
+		}
+		if  (num_volR==vol.num_vol)
+		{
+			sprintf(erreur,"Voici votre recherche");
+			markup=g_markup_printf_escaped(format,erreur);
+			gtk_label_set_markup(GTK_LABEL(output),markup);
 			gtk_entry_set_text (GTK_ENTRY (Compagnie_aerienne),vol.compagnie_aerienne);
 			gtk_entry_set_text (GTK_ENTRY (Depart), vol.depart);
 			gtk_entry_set_text (GTK_ENTRY (Destination), vol.destination);
-			gtk_entry_set_text (GTK_ENTRY (Date_depart), vol.date_depart);
-			gtk_entry_set_text (GTK_ENTRY (Date_retour), vol.date_retour);
+			sprintf(c1,"%d",vol.date_depart.jour);
+			gtk_entry_set_text (GTK_ENTRY (Date_depart_jour),c1);
+			sprintf(c2,"%d",vol.date_depart.mois);
+			gtk_entry_set_text (GTK_ENTRY (Date_depart_mois),c2);
+			sprintf(c3,"%d",vol.date_depart.annee);
+			gtk_entry_set_text (GTK_ENTRY (Date_depart_annee), c3);
+			sprintf(c4,"%d",vol.date_retour.jour);
+			gtk_entry_set_text (GTK_ENTRY (Date_retour_jour),c4);
+			sprintf(c5,"%d",vol.date_retour.mois);
+			gtk_entry_set_text (GTK_ENTRY (Date_retour_mois),c5);
+			sprintf(c6,"%d",vol.date_retour.annee);
+			gtk_entry_set_text (GTK_ENTRY (Date_retour_annee),c6);
 			gtk_entry_set_text (GTK_ENTRY (Classe), vol.classe);
-			gcvt(vol.tarif,6,c1);
-			gtk_entry_set_text (GTK_ENTRY (Tarif), c1);
-			sprintf(c2,"%d",vol.nbr_max);
-			gtk_entry_set_text (GTK_ENTRY (Nbr_max), c2);
+			gcvt(vol.tarif,6,c7);
+			gtk_entry_set_text (GTK_ENTRY (Tarif), c7);
+			sprintf(c8,"%d",vol.nbr_max);
+			gtk_entry_set_text (GTK_ENTRY (Nbr_max), c8);
+
 		}
 	}
 fclose(f);
 }
 }
 
-
 void
-on_valider_clicked                     (GtkWidget       *objet,
+on_AGvalider_clicked                     (GtkWidget       *objet,
                                         gpointer         user_data)
 {
-GtkWidget *Num_volM,*Compagnie_aerienne,*Depart,*Destination,*Date_depart,*Date_retour,*Classe,*Tarif,*Nbr_max,*Confirmation,*output;
+GtkWidget *Num_vol,*Compagnie_aerienne,*Depart,*Destination,*Date_depart_jour,*Date_depart_mois,*Date_depart_annee,*Date_retour_jour,*Date_retour_mois,*Date_retour_annee,*Classe,*Tarif,*Nbr_max,*output;
 
 VOL vol;
+
+char empty[]="\0";
+
+int r;
+
+char erreur[50], *markup; const char *format="<span foreground=\"red\"><b>\%s</b></span>";
+
+char ch[30],c[30];
 
 char *a[30];
 float n;
 
-Num_volM=lookup_widget(objet,"num_volM");
-Compagnie_aerienne=lookup_widget(objet,"compagnie_aerienneM");
-Depart=lookup_widget(objet,"departM");
-Destination=lookup_widget(objet,"destinationM");
-Date_depart=lookup_widget(objet,"date_departM");
-Date_retour=lookup_widget(objet,"date_retourM");
-Classe=lookup_widget(objet,"classeM");
-Tarif=lookup_widget(objet,"tarifM");
-Nbr_max=lookup_widget(objet,"nbr_maxM");
-output=lookup_widget(objet,"labelConfirmationM");
+Num_vol=lookup_widget(objet,"AGnum_volM");
+Compagnie_aerienne=lookup_widget(objet,"AGcompagnie_aerienneM");
+Depart=lookup_widget(objet,"AGdepartM");
+Destination=lookup_widget(objet,"AGdestinationM");
+Date_depart_jour=lookup_widget(objet,"AGdate_depart_jourM");
+Date_depart_mois=lookup_widget(objet,"AGdate_depart_moisM");
+Date_depart_annee=lookup_widget(objet,"AGdate_depart_anneeM");
+Date_retour_jour=lookup_widget(objet,"AGdate_retour_jourM");
+Date_retour_mois=lookup_widget(objet,"AGdate_retour_moisM");
+Date_retour_annee=lookup_widget(objet,"AGdate_retour_anneeM");
+Classe=lookup_widget(objet,"AGclasseM");
+Tarif=lookup_widget(objet,"AGtarifM");
+Nbr_max=lookup_widget(objet,"AGnbr_maxM");
+output=lookup_widget(objet,"AGlabelConfirmationM");
 
-vol.num_vol=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Num_volM));
+vol.num_vol=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Num_vol));
 strcpy(vol.compagnie_aerienne,gtk_entry_get_text(GTK_ENTRY(Compagnie_aerienne)));
 strcpy(vol.depart,gtk_entry_get_text(GTK_ENTRY(Depart)));
 strcpy(vol.destination,gtk_entry_get_text(GTK_ENTRY(Destination)));
-strcpy(vol.date_depart,gtk_entry_get_text(GTK_ENTRY(Date_depart)));
-strcpy(vol.date_retour,gtk_entry_get_text(GTK_ENTRY(Date_retour)));
+vol.date_depart.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_jour));
+vol.date_depart.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_mois));
+vol.date_depart.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_depart_annee));
+vol.date_retour.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_jour));
+vol.date_retour.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_mois));
+vol.date_retour.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Date_retour_annee));
 strcpy(vol.classe,gtk_combo_box_get_active_text(GTK_COMBO_BOX(Classe)));
 n=strtof(gtk_entry_get_text(GTK_ENTRY(Tarif)),&a);
 vol.tarif=n;
 vol.nbr_max=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(Nbr_max));
 
-modifier_vol(vol,Num_volM);
+strcpy(ch,gtk_entry_get_text(GTK_ENTRY(Tarif)));
 
+r=AGtest_tarif(ch);
 
-gtk_label_set_text(GTK_LABEL(output),"modifié avec succés") ;
+gcvt(vol.tarif,6,c);
+
+if((strcmp(empty,vol.compagnie_aerienne)==0) || (strcmp(empty,vol.destination)==0) || (strcmp(empty,vol.depart)==0) || (strcmp(empty,vol.destination)==0) || (strcmp(empty,c)==0))
+{
+	sprintf(erreur,"* champs obligatoires");
+      markup=g_markup_printf_escaped(format,erreur);
+      gtk_label_set_markup(GTK_LABEL(output),markup);
+}
+
+else if(r==1)
+{
+	sprintf(erreur,"tarif non valide");
+      markup=g_markup_printf_escaped(format,erreur);
+      gtk_label_set_markup(GTK_LABEL(output),markup);
+}
+else
+{
+	AGmodifier_vol(vol);	
+	sprintf(erreur,"Vol modifiee");
+	markup=g_markup_printf_escaped(format,erreur);
+	gtk_label_set_markup(GTK_LABEL(output),markup);
+}
 }
 
 
 void
-on_modifier_clicked                    (GtkWidget       *objet,
+on_AGmodifier_clicked                    (GtkWidget       *objet,
                                         gpointer         user_data)
 {
 GtkWidget *windowModifier,*windowAffichage;
-windowModifier=create_windowModifier ();
-windowAffichage=lookup_widget(objet,"windowAffichage");
+windowModifier=create_AGwindowModifier ();
+windowAffichage=lookup_widget(objet,"AGwindowAffichage");
 gtk_widget_show(windowModifier);
 gtk_widget_hide(windowAffichage);
 }
 
 
 void
-on_RetourM_clicked                     (GtkWidget       *objet,
+on_AGRetourM_clicked                     (GtkWidget       *objet,
                                         gpointer         user_data)
 {
 GtkWidget *windowModifier;
 GtkWidget *windowAffichage;
 GtkWidget *treeview1;
 
-windowModifier=lookup_widget(objet,"windowModifier");
+windowModifier=lookup_widget(objet,"AGwindowModifier");
 
 gtk_widget_destroy(windowModifier);
-windowAffichage=lookup_widget(objet,"windowAffichage");
-windowAffichage=create_windowAffichage();
+windowAffichage=lookup_widget(objet,"AGwindowAffichage");
+windowAffichage=create_AGwindowAffichage();
 
 gtk_widget_show(windowAffichage);
 
-treeview1=lookup_widget(windowAffichage,"treeview1");
+treeview1=lookup_widget(windowAffichage,"AGtreeview1");
 
-afficher_vol(treeview1);
+AGafficher_vol(treeview1);
 }
 
 
 void
-on_supprimer_clicked                   (GtkWidget       *objet,
+on_AGsupprimer_clicked                   (GtkWidget       *objet,
                                         gpointer         user_data)
 {
+
+int r;
+
+char erreur[50], *markup; const char *format="<span foreground=\"red\"><b>\%s</b></span>";
 
 GtkWidget* num_volS;
 GtkWidget *windowAffichage;
 GtkWidget *treeview1;
 GtkWidget *output,*input;
 
-input=lookup_widget(objet,"spinButtonSupprimer");
-output=lookup_widget(objet,"labelConfirmationS");
+input=lookup_widget(objet,"AGspinButtonSupprimer");
+output=lookup_widget(objet,"AGlabelConfirmationS");
 
 num_volS=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(input));
 
-supprimer_vol(num_volS);
+r=AGtest_num_vol(num_volS);
 
-windowAffichage=lookup_widget(objet,"windowAffichage");
+if(r==1)
+{
+	AGsupprimer_vol(num_volS);
+	windowAffichage=lookup_widget(objet,"AGwindowAffichage");
 
-gtk_widget_destroy(windowAffichage);
-windowAffichage=lookup_widget(objet,"windowAffichage");
-windowAffichage=create_windowAffichage();
+	gtk_widget_destroy(windowAffichage);
+	windowAffichage=lookup_widget(objet,"AGwindowAffichage");
+	windowAffichage=create_AGwindowAffichage();
 
-gtk_widget_show(windowAffichage);
+	gtk_widget_show(windowAffichage);
 
-treeview1=lookup_widget(windowAffichage,"treeview1");
+	treeview1=lookup_widget(windowAffichage,"AGtreeview1");
 
-afficher_vol(treeview1);
+	AGafficher_vol(treeview1);
 
-gtk_label_set_text(GTK_LABEL(output),"supprime avec succés") ;
+	gtk_label_set_text(GTK_LABEL(output),"supprime avec succés") ;
+}
+else
+{
+		sprintf(erreur,"ce numéro n'éxiste pas");
+		markup=g_markup_printf_escaped(format,erreur);
+		gtk_label_set_markup(GTK_LABEL(output),markup);
+}
 }
 
