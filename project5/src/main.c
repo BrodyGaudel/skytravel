@@ -28,7 +28,7 @@ main (int argc, char *argv[])
   gtk_init (&argc, &argv);
 
   add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
-
+  add_pixmap_directory ("pixmaps");
   /*
    * The following code was added by Glade to create one of each component
    * (except popup menus), just so that you see something after building

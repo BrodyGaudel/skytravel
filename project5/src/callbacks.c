@@ -41,7 +41,7 @@ GtkWidget *numh,*input1,*input2,*input3,*jour,*mois,*annee,*rank,*input4;
 GtkWidget *output1,*output2,*output3,*output4;
 char erreur[50], *markup; const char *format="<span foreground=\"blue\"><b>\%s</b></span>";
 char empty[]="\0",ch[30],ch1[20];
-int num,num1,r,test,test1;
+int num,num1,r,test,test1,w;
 GtkWidget *window1;
 gboolean toggle1,toggle2,toggle3;
 
@@ -77,7 +77,10 @@ strcpy(ch1,gtk_entry_get_text(GTK_ENTRY(input4)));
 		else if(toggle2)
 			strcpy(p.rank,"4etoille");
 		else if(toggle3)
-			strcpy(p.rank,"5etoille");
+
+		strcpy(p.rank,"5etoille");
+
+
 r=test_num(num);
 num1=atoi(ch);
 test=test_nombre(ch);
@@ -94,9 +97,9 @@ sprintf(erreur,"Ce champ est obligatoire");
       markup=g_markup_printf_escaped(format,erreur);
       gtk_label_set_markup(GTK_LABEL(output1),markup);
 }
-else if (strlen(p.nom)<3)
+else if (strlen(p.nom)<4)
 {
-sprintf(erreur,"Nom est trop courte");
+      sprintf(erreur,"Nom est trop courte");
       markup=g_markup_printf_escaped(format,erreur);
       gtk_label_set_markup(GTK_LABEL(output1),markup);
 }
@@ -136,7 +139,9 @@ ajouter_hotel(p);
 sprintf(erreur,"Ajout avec succés");
       markup=g_markup_printf_escaped(format,erreur);
       gtk_label_set_markup(GTK_LABEL(output4),markup);
+
 }
+
 }
 
 
@@ -266,19 +271,18 @@ FILE *f;
    if (p.numh==numh)
    {
      
-     gtk_entry_set_text (GTK_ENTRY (output2), p.nom);
-     gtk_entry_set_text (GTK_ENTRY (output3), p.lieu);
-     gtk_entry_set_text (GTK_ENTRY (output4), p.chambre_vide);
-     gtk_entry_set_text (GTK_ENTRY (output9), p.prix);
+            gtk_entry_set_text (GTK_ENTRY (output2), p.nom);
+            gtk_entry_set_text (GTK_ENTRY (output3), p.lieu);
+            gtk_entry_set_text (GTK_ENTRY (output4), p.chambre_vide);
+            gtk_entry_set_text (GTK_ENTRY (output9), p.prix);
+   }
+        else{
+ 	    sprintf(erreur,"ce numéro n'éxiste pas");
+             markup=g_markup_printf_escaped(format,erreur);
+             gtk_label_set_markup(GTK_LABEL(output1),markup);
+	    }
+   }
       
-   }
-else   
-           {
-      sprintf(erreur,"ce numéro n'éxiste pas");
-      markup=g_markup_printf_escaped(format,erreur);
-      gtk_label_set_markup(GTK_LABEL(output1),markup);
-            }
-   }
 }
 }
 
