@@ -3,7 +3,11 @@
 
 <glade-interface>
 
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 <widget class="GtkWindow" id="gestion_voiture">
+=======
+<widget class="GtkWindow" id="AGwindowAffichage">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
   <property name="visible">True</property>
   <property name="title" translatable="yes">Gestion des voitures</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
@@ -20,10 +24,11 @@
   <property name="urgency_hint">False</property>
 
   <child>
-    <widget class="GtkFixed" id="fixed1">
+    <widget class="GtkFixed" id="AGfixed1">
       <property name="visible">True</property>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkImage" id="image1">
 	  <property name="width_request">552</property>
 	  <property name="height_request">424</property>
@@ -44,6 +49,11 @@
 	<widget class="GtkButton" id="afficherlesvoitures">
 	  <property name="width_request">192</property>
 	  <property name="height_request">56</property>
+=======
+	<widget class="GtkTreeView" id="AGtreeview1">
+	  <property name="width_request">1112</property>
+	  <property name="height_request">224</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="label" translatable="yes">Afficher les voitures</property>
@@ -53,6 +63,7 @@
 	  <signal name="clicked" handler="on_afficherlesvoitures_clicked" last_modification_time="Fri, 29 Nov 2019 14:47:49 GMT"/>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">192</property>
 	  <property name="y">352</property>
 	</packing>
@@ -139,10 +150,15 @@
 	<packing>
 	  <property name="x">32</property>
 	  <property name="y">112</property>
+=======
+	  <property name="x">8</property>
+	  <property name="y">136</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkCellView" id="cellview5">
 	  <property name="width_request">112</property>
 	  <property name="height_request">39</property>
@@ -203,24 +219,51 @@
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+=======
+	<widget class="GtkSpinButton" id="AGspinButtonSupprimer">
+	  <property name="width_request">100</property>
+	  <property name="height_request">50</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
+	  <property name="adjustment">1 0 100 1 10 10</property>
 	</widget>
 	<packing>
-	  <property name="x">24</property>
-	  <property name="y">64</property>
+	  <property name="x">896</property>
+	  <property name="y">80</property>
 	</packing>
       </child>
 
       <child>
+	<widget class="GtkImage" id="AGimageAffichage">
+	  <property name="width_request">1128</property>
+	  <property name="height_request">464</property>
+	  <property name="visible">True</property>
+	  <property name="pixbuf">interface-generale.png</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">24</property>
+	  <property name="y">64</property>
+=======
+	  <property name="x">0</property>
+	  <property name="y">0</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label2k">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
@@ -243,10 +286,89 @@
 	<packing>
 	  <property name="x">40</property>
 	  <property name="y">112</property>
+=======
+	<widget class="GtkButton" id="AGmodifier">
+	  <property name="width_request">100</property>
+	  <property name="height_request">45</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGmodifier_clicked" last_modification_time="Wed, 11 Dec 2019 20:06:01 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="alignment2">
+	      <property name="visible">True</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xscale">0</property>
+	      <property name="yscale">0</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
+
+	      <child>
+		<widget class="GtkHBox" id="hbox2">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">2</property>
+
+		  <child>
+		    <widget class="GtkImage" id="image2">
+		      <property name="visible">True</property>
+		      <property name="stock">gtk-edit</property>
+		      <property name="icon_size">4</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkLabel" id="label2">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Modifier&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+		</widget>
+	      </child>
+	    </widget>
+	  </child>
+	</widget>
+	<packing>
+	  <property name="x">24</property>
+	  <property name="y">392</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label3k">
 	  <property name="width_request">48</property>
 	  <property name="height_request">24</property>
@@ -254,6 +376,15 @@
 	  <property name="label" translatable="yes">Age :</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
+=======
+	<widget class="GtkLabel" id="AGlabelListe">
+	  <property name="width_request">159</property>
+	  <property name="height_request">35</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;dark blue&quot; size=&quot;large&quot;&gt;&lt;b&gt;Liste des Vols&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -265,19 +396,114 @@
 	  <property name="width_chars">-1</property>
 	  <property name="single_line_mode">False</property>
 	  <property name="angle">0</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	</widget>
 	<packing>
 	  <property name="x">64</property>
 	  <property name="y">168</property>
+=======
+	</widget>
+	<packing>
+	  <property name="x">480</property>
+	  <property name="y">48</property>
 	</packing>
       </child>
 
       <child>
+	<widget class="GtkButton" id="AGsupprimer">
+	  <property name="width_request">110</property>
+	  <property name="height_request">50</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGsupprimer_clicked" last_modification_time="Wed, 11 Dec 2019 20:06:22 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="AGalignment4">
+	      <property name="visible">True</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xscale">0</property>
+	      <property name="yscale">0</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
+
+	      <child>
+		<widget class="GtkHBox" id="AGhbox4">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">2</property>
+
+		  <child>
+		    <widget class="GtkImage" id="AGimage4">
+		      <property name="visible">True</property>
+		      <property name="stock">gtk-delete</property>
+		      <property name="icon_size">4</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkLabel" id="AGlabel4">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Supprimer&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+		</widget>
+	      </child>
+	    </widget>
+	  </child>
+	</widget>
+	<packing>
+	  <property name="x">1008</property>
+	  <property name="y">80</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label4k">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Kilométrage :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelConfirmationS">
+	  <property name="width_request">300</property>
+	  <property name="height_request">50</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes"></property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -293,12 +519,18 @@
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">40</property>
 	  <property name="y">208</property>
+=======
+	  <property name="x">440</property>
+	  <property name="y">392</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label5k">
 	  <property name="width_request">120</property>
 	  <property name="height_request">40</property>
@@ -352,6 +584,112 @@
 
       <child>
 	<widget class="GtkEntry" id="entryserie_voiture">
+=======
+	<widget class="GtkButton" id="AGRetour">
+	  <property name="width_request">100</property>
+	  <property name="height_request">45</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGRetour_clicked" last_modification_time="Wed, 11 Dec 2019 20:06:12 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="alignment3">
+	      <property name="visible">True</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xscale">0</property>
+	      <property name="yscale">0</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
+
+	      <child>
+		<widget class="GtkHBox" id="hbox3">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">2</property>
+
+		  <child>
+		    <widget class="GtkImage" id="image3">
+		      <property name="visible">True</property>
+		      <property name="stock">gtk-add</property>
+		      <property name="icon_size">4</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkLabel" id="label3">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Ajouter&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+		</widget>
+	      </child>
+	    </widget>
+	  </child>
+	</widget>
+	<packing>
+	  <property name="x">992</property>
+	  <property name="y">392</property>
+	</packing>
+      </child>
+    </widget>
+  </child>
+</widget>
+
+<widget class="GtkWindow" id="AGwindowAjout">
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Ajouter vol</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_NONE</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+
+  <child>
+    <widget class="GtkFixed" id="AGfixed2">
+      <property name="visible">True</property>
+
+      <child>
+	<widget class="GtkEntry" id="AGcompagnie_aerienne">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
@@ -365,13 +703,22 @@
 	  <property name="activates_default">False</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">152</property>
 	  <property name="y">112</property>
+=======
+	  <property name="x">200</property>
+	  <property name="y">176</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entryage_voiture">
+=======
+	<widget class="GtkEntry" id="AGdestination">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
@@ -385,13 +732,22 @@
 	  <property name="activates_default">False</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">152</property>
 	  <property name="y">168</property>
+=======
+	  <property name="x">200</property>
+	  <property name="y">304</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entrykilometrage_voiture">
+=======
+	<widget class="GtkEntry" id="AGtarif">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
@@ -405,33 +761,51 @@
 	  <property name="activates_default">False</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">152</property>
 	  <property name="y">216</property>
+=======
+	  <property name="x">376</property>
+	  <property name="y">384</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entryprix_voiture">
+=======
+	<widget class="GtkSpinButton" id="AGnbr_max">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">0</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">100 1 500 1 10 10</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">152</property>
 	  <property name="y">264</property>
+=======
+	  <property name="x">376</property>
+	  <property name="y">440</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entrydate_voiture">
+=======
+	<widget class="GtkEntry" id="AGdepart">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
@@ -445,21 +819,33 @@
 	  <property name="activates_default">False</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">152</property>
 	  <property name="y">312</property>
+=======
+	  <property name="x">200</property>
+	  <property name="y">240</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label7k">
 	  <property name="width_request">176</property>
 	  <property name="height_request">72</property>
+=======
+	<widget class="GtkSpinButton" id="AGnum_vol">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes"></property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="selectable">False</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
@@ -473,10 +859,18 @@
 	<packing>
 	  <property name="x">176</property>
 	  <property name="y">352</property>
+=======
+	  <property name="adjustment">1 1 1000 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">384</property>
+	  <property name="y">104</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkButton" id="valider">
 	  <property name="width_request">136</property>
 	  <property name="height_request">48</property>
@@ -553,10 +947,29 @@
 	<packing>
 	  <property name="x">48</property>
 	  <property name="y">360</property>
+=======
+	<widget class="GtkSpinButton" id="AGdate_depart_jour">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 31 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">568</property>
+	  <property name="y">176</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkButton" id="retourgestion">
 	  <property name="width_request">136</property>
 	  <property name="height_request">48</property>
@@ -633,10 +1046,29 @@
 	<packing>
 	  <property name="x">344</property>
 	  <property name="y">360</property>
+=======
+	<widget class="GtkSpinButton" id="AGdate_depart_mois">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 12 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">640</property>
+	  <property name="y">176</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="errr1">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
@@ -645,24 +1077,34 @@
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+=======
+	<widget class="GtkSpinButton" id="AGdate_depart_annee">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
+	  <property name="adjustment">2019 2019 2025 1 10 10</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">352</property>
 	  <property name="y">64</property>
+=======
+	  <property name="x">712</property>
+	  <property name="y">176</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="errr2">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
@@ -671,31 +1113,105 @@
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+=======
+	<widget class="GtkSpinButton" id="AGdate_retour_jour">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
+	  <property name="adjustment">1 1 31 1 10 10</property>
 	</widget>
 	<packing>
-	  <property name="x">352</property>
-	  <property name="y">112</property>
+	  <property name="x">568</property>
+	  <property name="y">240</property>
 	</packing>
       </child>
 
       <child>
+	<widget class="GtkSpinButton" id="AGdate_retour_mois">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 12 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">640</property>
+	  <property name="y">240</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_retour_annee">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">2019 2019 2025 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">712</property>
+	  <property name="y">240</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkImage" id="AGimageAjouter">
+	  <property name="width_request">800</property>
+	  <property name="height_request">544</property>
+	  <property name="visible">True</property>
+	  <property name="pixbuf">interface generale1.png</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">352</property>
+	  <property name="y">112</property>
+=======
+	  <property name="x">0</property>
+	  <property name="y">0</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="errr3">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes"></property>
+=======
+	<widget class="GtkLabel" id="AGlabelAjout">
+	  <property name="width_request">216</property>
+	  <property name="height_request">40</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;dark blue&quot; size=&quot;large&quot;&gt;&lt;b&gt;Ajouter une vol&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -709,12 +1225,18 @@
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">352</property>
 	  <property name="y">168</property>
+=======
+	  <property name="x">304</property>
+	  <property name="y">24</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="errr4">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
@@ -796,6 +1318,11 @@
 	<widget class="GtkComboBox" id="comboboxkhalil">
 	  <property name="width_request">199</property>
 	  <property name="height_request">38</property>
+=======
+	<widget class="GtkComboBox" id="AGclasse">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="visible">True</property>
 	  <property name="items" translatable="yes">volkswagen
 mercedes
@@ -813,6 +1340,7 @@ citroen</property>
 	  <property name="focus_on_click">True</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">153</property>
 	  <property name="y">64</property>
 	</packing>
@@ -993,21 +1521,38 @@ voiture :</property>
 	<packing>
 	  <property name="x">32</property>
 	  <property name="y">264</property>
+=======
+	  <property name="x">568</property>
+	  <property name="y">304</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkButton" id="retourajouter">
 	  <property name="width_request">160</property>
 	  <property name="height_request">56</property>
+=======
+	<widget class="GtkButton" id="AGAfficher">
+	  <property name="width_request">95</property>
+	  <property name="height_request">40</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <signal name="clicked" handler="on_retourajouter_clicked" last_modification_time="Fri, 29 Nov 2019 14:46:36 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment1">
+=======
+	  <signal name="clicked" handler="on_AGAfficher_clicked" last_modification_time="Wed, 11 Dec 2019 20:06:47 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="AGalignment2">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -1019,13 +1564,21 @@ voiture :</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		<widget class="GtkHBox" id="hbox1">
+=======
+		<widget class="GtkHBox" id="AGhbox2">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		    <widget class="GtkImage" id="image3">
+=======
+		    <widget class="GtkImage" id="AGimage2">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-go-back</property>
 		      <property name="icon_size">4</property>
@@ -1042,11 +1595,19 @@ voiture :</property>
 		  </child>
 
 		  <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		    <widget class="GtkLabel" id="label9">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
+=======
+		    <widget class="GtkLabel" id="AGlabel2">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Afficher&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -1071,23 +1632,41 @@ voiture :</property>
 	  </child>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">368</property>
 	  <property name="y">352</property>
+=======
+	  <property name="x">696</property>
+	  <property name="y">496</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkButton" id="modifierunevoiture">
 	  <property name="width_request">160</property>
 	  <property name="height_request">56</property>
+=======
+	<widget class="GtkButton" id="AGAjouter">
+	  <property name="width_request">95</property>
+	  <property name="height_request">40</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <signal name="clicked" handler="on_modifierunevoiture_clicked" last_modification_time="Fri, 29 Nov 2019 16:33:31 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment8">
+=======
+	  <signal name="clicked" handler="on_AGAjouter_clicked" last_modification_time="Wed, 11 Dec 2019 20:06:57 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="AGalignment1">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -1099,13 +1678,21 @@ voiture :</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		<widget class="GtkHBox" id="hbox8">
+=======
+		<widget class="GtkHBox" id="AGhbox1">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		    <widget class="GtkImage" id="image13">
+=======
+		    <widget class="GtkImage" id="AGimage1">
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-edit</property>
 		      <property name="icon_size">4</property>
@@ -1122,11 +1709,19 @@ voiture :</property>
 		  </child>
 
 		  <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 		    <widget class="GtkLabel" id="label24">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Modifier</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
+=======
+		    <widget class="GtkLabel" id="AGlabel">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Ajouter&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -1151,12 +1746,18 @@ voiture :</property>
 	  </child>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">192</property>
 	  <property name="y">352</property>
+=======
+	  <property name="x">8</property>
+	  <property name="y">496</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkScrolledWindow" id="scrolledwindow1">
 	  <property name="width_request">544</property>
 	  <property name="height_request">248</property>
@@ -1218,6 +1819,574 @@ voiture :</property>
 	  <property name="height_request">424</property>
 	  <property name="visible">True</property>
 	  <property name="pixbuf">ob_888a26_rent-a-car-tunisia.jpg</property>
+=======
+	<widget class="GtkLabel" id="AGlabelConfirmation">
+	  <property name="width_request">248</property>
+	  <property name="height_request">49</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes"></property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.490000009537</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">0</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">264</property>
+	  <property name="y">488</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelNum">
+	  <property name="width_request">128</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Numero de Vol :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">224</property>
+	  <property name="y">112</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelCompagnieAerienne">
+	  <property name="width_request">170</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Compagnie aerienne :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	</widget>
+	<packing>
+	  <property name="x">0</property>
+	  <property name="y">0</property>
+=======
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">16</property>
+	  <property name="y">184</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview9">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+	  <property name="visible">True</property>
+	  <property name="background">#ffffffffffff</property>
+	</widget>
+	<packing>
+	  <property name="x">32</property>
+	  <property name="y">64</property>
+=======
+	<widget class="GtkLabel" id="AGlabelDepart">
+	  <property name="width_request">71</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Depart :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">112</property>
+	  <property name="y">248</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelDestination">
+	  <property name="width_request">113</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Destination :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">72</property>
+	  <property name="y">312</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelDateDepart">
+	  <property name="width_request">129</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Date de depart :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">432</property>
+	  <property name="y">184</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelDateRetour">
+	  <property name="width_request">145</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Date de retour :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">424</property>
+	  <property name="y">248</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelClasse">
+	  <property name="width_request">73</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Classe :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">480</property>
+	  <property name="y">312</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelTarif">
+	  <property name="width_request">70</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Tarif :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">280</property>
+	  <property name="y">392</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkLabel" id="AGlabelNbrMax">
+	  <property name="width_request">241</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Nombre maximal de voyageurs :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">104</property>
+	  <property name="y">448</property>
+	</packing>
+      </child>
+    </widget>
+  </child>
+</widget>
+
+<widget class="GtkWindow" id="AGwindowModifier">
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Modifier vol</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_NONE</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+
+  <child>
+    <widget class="GtkFixed" id="AGfixed4">
+      <property name="visible">True</property>
+
+      <child>
+	<widget class="GtkEntry" id="AGcompagnie_aerienneM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="editable">True</property>
+	  <property name="visibility">True</property>
+	  <property name="max_length">0</property>
+	  <property name="text" translatable="yes"></property>
+	  <property name="has_frame">True</property>
+	  <property name="invisible_char">•</property>
+	  <property name="activates_default">False</property>
+	</widget>
+	<packing>
+	  <property name="x">192</property>
+	  <property name="y">184</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview10">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+=======
+	<widget class="GtkEntry" id="AGdestinationM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="background">#fd44fd44fd44</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">32</property>
+	  <property name="y">112</property>
+=======
+	  <property name="x">192</property>
+	  <property name="y">320</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview11">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+=======
+	<widget class="GtkEntry" id="AGtarifM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="background">#ffffffffffff</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">32</property>
+	  <property name="y">160</property>
+=======
+	  <property name="x">416</property>
+	  <property name="y">392</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview12">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+=======
+	<widget class="GtkSpinButton" id="AGnbr_maxM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="background">#ffffffffffff</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">32</property>
+	  <property name="y">208</property>
+=======
+	  <property name="x">416</property>
+	  <property name="y">448</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview13">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+=======
+	<widget class="GtkEntry" id="AGdepartM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="background">#ffffffffffff</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">32</property>
+	  <property name="y">256</property>
+=======
+	  <property name="x">192</property>
+	  <property name="y">248</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkCellView" id="cellview14">
+	  <property name="width_request">112</property>
+	  <property name="height_request">39</property>
+=======
+	<widget class="GtkSpinButton" id="AGnum_volM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="background">#ffffffffffff</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">32</property>
+	  <property name="y">304</property>
+=======
+	  <property name="x">408</property>
+	  <property name="y">104</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_depart_jourM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 31 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">568</property>
+	  <property name="y">176</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_depart_moisM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 12 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">640</property>
+	  <property name="y">176</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_depart_anneeM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">2019 2019 2015 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">712</property>
+	  <property name="y">176</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_retour_jourM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 31 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">568</property>
+	  <property name="y">240</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_retour_moisM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">1 1 12 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">640</property>
+	  <property name="y">240</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkSpinButton" id="AGdate_retour_anneeM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">34</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="climb_rate">1</property>
+	  <property name="digits">0</property>
+	  <property name="numeric">False</property>
+	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
+	  <property name="snap_to_ticks">False</property>
+	  <property name="wrap">False</property>
+	  <property name="adjustment">2019 2019 2015 1 10 10</property>
+	</widget>
+	<packing>
+	  <property name="x">712</property>
+	  <property name="y">240</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkImage" id="AGimageModifier">
+	  <property name="width_request">808</property>
+	  <property name="height_request">544</property>
+	  <property name="visible">True</property>
+	  <property name="pixbuf">interface generale1.png</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
 	  <property name="xpad">0</property>
@@ -1230,91 +2399,278 @@ voiture :</property>
       </child>
 
       <child>
-	<widget class="GtkCellView" id="cellview9">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
+	<widget class="GtkLabel" id="AGlabelNumVolM">
+	  <property name="width_request">139</property>
+	  <property name="height_request">19</property>
 	  <property name="visible">True</property>
-	  <property name="background">#ffffffffffff</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Numero de la vol :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
 	</widget>
 	<packing>
-	  <property name="x">32</property>
-	  <property name="y">64</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkCellView" id="cellview10">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
-	  <property name="visible">True</property>
-	  <property name="background">#fd44fd44fd44</property>
-	</widget>
-	<packing>
-	  <property name="x">32</property>
+	  <property name="x">248</property>
 	  <property name="y">112</property>
 	</packing>
       </child>
 
       <child>
-	<widget class="GtkCellView" id="cellview11">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
+	<widget class="GtkComboBox" id="AGclasseM">
+	  <property name="width_request">200</property>
+	  <property name="height_request">30</property>
 	  <property name="visible">True</property>
-	  <property name="background">#ffffffffffff</property>
+	  <property name="items" translatable="yes">economic
+business</property>
+	  <property name="add_tearoffs">False</property>
+	  <property name="focus_on_click">True</property>
 	</widget>
 	<packing>
-	  <property name="x">32</property>
-	  <property name="y">160</property>
+	  <property name="x">568</property>
+	  <property name="y">320</property>
 	</packing>
       </child>
 
       <child>
-	<widget class="GtkCellView" id="cellview12">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
+	<widget class="GtkButton" id="AGrecherche">
+	  <property name="width_request">35</property>
+	  <property name="height_request">30</property>
 	  <property name="visible">True</property>
-	  <property name="background">#ffffffffffff</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGrecherche_clicked" last_modification_time="Wed, 11 Dec 2019 20:07:09 GMT"/>
+
+	  <child>
+	    <widget class="GtkImage" id="AGimage6">
+	      <property name="visible">True</property>
+	      <property name="stock">gtk-find</property>
+	      <property name="icon_size">4</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	    </widget>
+	  </child>
 	</widget>
 	<packing>
-	  <property name="x">32</property>
-	  <property name="y">208</property>
+	  <property name="x">624</property>
+	  <property name="y">104</property>
 	</packing>
       </child>
 
       <child>
-	<widget class="GtkCellView" id="cellview13">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
+	<widget class="GtkButton" id="AGvalider">
+	  <property name="width_request">120</property>
+	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
-	  <property name="background">#ffffffffffff</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGvalider_clicked" last_modification_time="Wed, 11 Dec 2019 20:07:16 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="AGalignment5">
+	      <property name="visible">True</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xscale">0</property>
+	      <property name="yscale">0</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
+
+	      <child>
+		<widget class="GtkHBox" id="AGhbox5">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">2</property>
+
+		  <child>
+		    <widget class="GtkImage" id="AGimage7">
+		      <property name="visible">True</property>
+		      <property name="stock">gtk-apply</property>
+		      <property name="icon_size">4</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkLabel" id="AGlabel19">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Valider&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+		</widget>
+	      </child>
+	    </widget>
+	  </child>
 	</widget>
 	<packing>
-	  <property name="x">32</property>
-	  <property name="y">256</property>
+	  <property name="x">0</property>
+	  <property name="y">496</property>
 	</packing>
       </child>
 
       <child>
-	<widget class="GtkCellView" id="cellview14">
-	  <property name="width_request">112</property>
-	  <property name="height_request">39</property>
+	<widget class="GtkLabel" id="AGlabelConfirmationM">
+	  <property name="width_request">248</property>
+	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
-	  <property name="background">#ffffffffffff</property>
+	  <property name="label" translatable="yes"></property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">False</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
 	</widget>
 	<packing>
-	  <property name="x">32</property>
-	  <property name="y">304</property>
+	  <property name="x">280</property>
+	  <property name="y">497</property>
 	</packing>
       </child>
 
       <child>
+	<widget class="GtkButton" id="AGRetourM">
+	  <property name="width_request">120</property>
+	  <property name="height_request">40</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_AGRetourM_clicked" last_modification_time="Wed, 11 Dec 2019 20:07:23 GMT"/>
+
+	  <child>
+	    <widget class="GtkAlignment" id="alignment1">
+	      <property name="visible">True</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xscale">0</property>
+	      <property name="yscale">0</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
+
+	      <child>
+		<widget class="GtkHBox" id="hbox1">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">2</property>
+
+		  <child>
+		    <widget class="GtkImage" id="image1">
+		      <property name="visible">True</property>
+		      <property name="stock">gtk-file</property>
+		      <property name="icon_size">4</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+
+		  <child>
+		    <widget class="GtkLabel" id="label1">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;Afficher&lt;/b&gt;&lt;/span&gt;</property>
+		      <property name="use_underline">False</property>
+		      <property name="use_markup">True</property>
+		      <property name="justify">GTK_JUSTIFY_LEFT</property>
+		      <property name="wrap">False</property>
+		      <property name="selectable">False</property>
+		      <property name="xalign">0.5</property>
+		      <property name="yalign">0.5</property>
+		      <property name="xpad">0</property>
+		      <property name="ypad">0</property>
+		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		      <property name="width_chars">-1</property>
+		      <property name="single_line_mode">False</property>
+		      <property name="angle">0</property>
+		    </widget>
+		    <packing>
+		      <property name="padding">0</property>
+		      <property name="expand">False</property>
+		      <property name="fill">False</property>
+		    </packing>
+		  </child>
+		</widget>
+	      </child>
+	    </widget>
+	  </child>
+	</widget>
+	<packing>
+	  <property name="x">680</property>
+	  <property name="y">496</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label15k">
 	  <property name="width_request">128</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Marque :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelCompagnieAerienneM">
+	  <property name="width_request">160</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Compagnie aerienne :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1328,19 +2684,32 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">24</property>
 	  <property name="y">64</property>
+=======
+	  <property name="x">16</property>
+	  <property name="y">192</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label16k">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">num de série :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelDepartM">
+	  <property name="width_request">71</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Depart :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1354,19 +2723,32 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">40</property>
 	  <property name="y">112</property>
+=======
+	  <property name="x">104</property>
+	  <property name="y">256</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label17k">
 	  <property name="width_request">48</property>
 	  <property name="height_request">24</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Age :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelDestinationM">
+	  <property name="width_request">113</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Destination :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1381,18 +2763,30 @@ voiture :</property>
 	</widget>
 	<packing>
 	  <property name="x">64</property>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="y">168</property>
+=======
+	  <property name="y">328</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label18k">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Kilométrage :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelDateDepartM">
+	  <property name="width_request">129</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Date de depart :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1406,19 +2800,32 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">40</property>
 	  <property name="y">208</property>
+=======
+	  <property name="x">432</property>
+	  <property name="y">192</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label19k">
 	  <property name="width_request">120</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">prix par jour :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelDateRetourM">
+	  <property name="width_request">145</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Date de retour :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1432,19 +2839,31 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">24</property>
+=======
+	  <property name="x">424</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="y">256</property>
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkLabel" id="label20k">
 	  <property name="width_request">72</property>
 	  <property name="height_request">32</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Date :</property>
+=======
+	<widget class="GtkLabel" id="AGlabelClasseM">
+	  <property name="width_request">73</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Classe :&lt;/b&gt;&lt;/span&gt;</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1458,12 +2877,18 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	  <property name="x">48</property>
 	  <property name="y">312</property>
+=======
+	  <property name="x">480</property>
+	  <property name="y">328</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entryserie_mod">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
@@ -1500,10 +2925,35 @@ voiture :</property>
 	<packing>
 	  <property name="x">176</property>
 	  <property name="y">168</property>
+=======
+	<widget class="GtkLabel" id="AGlabelTarifM">
+	  <property name="width_request">70</property>
+	  <property name="height_request">17</property>
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Tarif :&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+	  <property name="x">312</property>
+	  <property name="y">400</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
       <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
 	<widget class="GtkEntry" id="entrykilometrage_mod">
 	  <property name="width_request">200</property>
 	  <property name="height_request">32</property>
@@ -1560,17 +3010,14 @@ voiture :</property>
 	<packing>
 	  <property name="x">176</property>
 	  <property name="y">312</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label21k">
-	  <property name="width_request">176</property>
-	  <property name="height_request">72</property>
+=======
+	<widget class="GtkLabel" id="AGlabelNbrMaxM">
+	  <property name="width_request">234</property>
+	  <property name="height_request">17</property>
 	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;black&quot; size=&quot;small&quot;&gt;&lt;b&gt;*Nombre maximal de voyageurs :&lt;/b&gt;&lt;/span&gt;</property>
 	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
+	  <property name="use_markup">True</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -1584,11 +3031,53 @@ voiture :</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-	  <property name="x">176</property>
-	  <property name="y">352</property>
+	  <property name="x">136</property>
+	  <property name="y">456</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
 	</packing>
       </child>
 
+      <child>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	<widget class="GtkLabel" id="label21k">
+	  <property name="width_request">176</property>
+	  <property name="height_request">72</property>
+=======
+	<widget class="GtkLabel" id="AGlabel1">
+	  <property name="width_request">259</property>
+	  <property name="height_request">29</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	  <property name="visible">True</property>
+	  <property name="label" translatable="yes">&lt;span font_desc=&quot;pursia&quot;foreground=&quot;dark blue&quot; size=&quot;large&quot;&gt;&lt;b&gt;Modifier une Vol&lt;/b&gt;&lt;/span&gt;</property>
+	  <property name="use_underline">False</property>
+	  <property name="use_markup">True</property>
+	  <property name="justify">GTK_JUSTIFY_LEFT</property>
+	  <property name="wrap">False</property>
+	  <property name="selectable">False</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	  <property name="width_chars">-1</property>
+	  <property name="single_line_mode">False</property>
+	  <property name="angle">0</property>
+	</widget>
+	<packing>
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
+	  <property name="x">176</property>
+	  <property name="y">352</property>
+=======
+	  <property name="x">288</property>
+	  <property name="y">32</property>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
+	</packing>
+      </child>
+    </widget>
+  </child>
+</widget>
+
+<<<<<<< HEAD:voiture1/voiture1/voiture1.glade
       <child>
 	<widget class="GtkButton" id="validerchangement">
 	  <property name="width_request">136</property>
@@ -1773,6 +3262,45 @@ citroen</property>
 	  <property name="x">175</property>
 	  <property name="y">64</property>
 	</packing>
+=======
+<widget class="GtkWindow" id="AGwindowCatalogue">
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Catalogue</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_NONE</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+
+  <child>
+    <widget class="GtkScrolledWindow" id="AGscrolledwindow1">
+      <property name="visible">True</property>
+      <property name="can_focus">True</property>
+      <property name="hscrollbar_policy">GTK_POLICY_ALWAYS</property>
+      <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
+      <property name="shadow_type">GTK_SHADOW_IN</property>
+      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
+
+      <child>
+	<widget class="GtkTreeView" id="AGtreeview1">
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="headers_visible">True</property>
+	  <property name="rules_hint">False</property>
+	  <property name="reorderable">False</property>
+	  <property name="enable_search">True</property>
+	  <property name="fixed_height_mode">False</property>
+	  <property name="hover_selection">False</property>
+	  <property name="hover_expand">False</property>
+	</widget>
+>>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/try.glade
       </child>
     </widget>
   </child>

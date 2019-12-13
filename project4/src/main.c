@@ -11,12 +11,13 @@
 
 #include "interface.h"
 #include "support.h"
-
+#include "reclamation.h"
 int
 main (int argc, char *argv[])
 {
-  GtkWidget *gestion_voiture;
-  
+  GtkWidget *Reclamation_client;
+  GtkWidget *principal1;
+ 
 
 #ifdef ENABLE_NLS
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -28,22 +29,17 @@ main (int argc, char *argv[])
   gtk_init (&argc, &argv);
 
   add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
-add_pixmap_directory("pixmaps");
 
   /*
    * The following code was added by Glade to create one of each component
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-<<<<<<< HEAD:voiture1/voiture1/src/main.c
-  gestion_voiture = create_gestion_voiture ();
-  gtk_widget_show (gestion_voiture);
+  Reclamation_client = create_Reclamation_client();
+  gtk_widget_show (Reclamation_client);
   
-=======
-  windowAjout = create_AGwindowAjout ();
-  gtk_widget_show (windowAjout);
->>>>>>> 41ddd237c06665d7e41b1b57a03fdcb03b58e03e:try/src/main.c
-
+  principal1=create_principal1();
+  gtk_widget_show (principal1);
   gtk_main ();
   return 0;
 }
