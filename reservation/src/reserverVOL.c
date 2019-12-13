@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "reservation.h"
 #include "reserverVOL.h"
 #include <gtk/gtk.h>
 
@@ -197,6 +198,36 @@ if(f!=NULL)
 }
 }
 
+int cherchernombrevoy(char depart[],char destination[],char compagnie[],char date_aller[],char date_retour[],char classe[])
+{
+char depart1[50];
+char destination1[50];
+char compagnie1[50];
+char date_aller1[50];
+char date_retour1[50];
+char classe1[50];
+FILE *f=fopen("/home/malekbouslah/Projects/reservation/src/catalogue_vol.txt","r");
+VOL v;
+
+if(f!=NULL)
+{
+	 while(fscanf(f,"%d %s %s %s %s %s %s %f %d ",&v.num_vol,v.compagnie_aerienne,v.depart,v.destination,v.date_depart,v.date_retour,v.classe,&v.tarif,&v.nbr_max)!=EOF)
+	{	strcpy(depart1,depart);
+		strcpy(destination1,destination);
+		strcpy(compagnie1,compagnie);
+		strcpy(date_aller1,date_aller);
+		strcpy(date_retour1,date_retour);
+		strcpy(classe1,classe);		
+		if(strcmp(v.depart,depart1)==0 && strcmp(v.destination,destination1)==0 && strcmp(v.compagnie_aerienne,compagnie1)==0 && strcmp(v.date_depart,date_aller1)==0 && strcmp(v.date_retour,date_retour1)==0 && strcmp(v.classe,classe1)==0)
+		{
+			fclose(f);
+			return v.nbr_max;
+		}
+	}
+}
+}
+
+
 float calcul_prix_vol(float tarif,int nbr_voy)
 {
 float t;
@@ -240,4 +271,51 @@ if (f!=NULL)
 fclose(f1);
 fclose(f);
 rename("/home/malekbouslah/Projects/reservation/src/tempo.txt","/home/malekbouslah/Projects/reservation/src/catalogue_vol.txt");
+}
+
+void modifierclasseprix(char numvol[],char classem[],int nbvoy,float prixm)
+{
+reservation r;
+
+FILE* f=fopen("/home/malekbouslah/Projects/reservation/src/reservation.txt","r");
+FILE* f1=fopen("/home/malekbouslah/Projects/reservation/src/tempo.txt","a+");
+
+if (f!=NULL)
+{
+	while(fscanf(f,"%s %s %s %s %s %s %f  \n",r.num_res,r.identifiant,r.date_reservation.jour,r.date_reservation.mois,r.date_reservation.annee,r.type,&r.devis)!=EOF)
+	{
+		if(strcmp(numvol,r.num_res)==0)
+		{
+		fprintf(f1,"%s %s %s %s %s %s %f  \n",r.num_res,r.identifiant,r.date_reservation.jour,r.date_reservation.mois,r.date_reservation.annee,r.type,r.devis=prixm);
+		}	
+		else
+		fprintf(f1,"%s %s %s %s %s %s %f  \n",r.num_res,r.identifiant,r.date_reservation.jour,r.date_reservation.mois,r.date_reservation.annee,r.type,r.devis);
+	}
+}
+fclose(f1);
+fclose(f);
+rename("/home/malekbouslah/Projects/reservation/src/tempo.txt","/home/malekbouslah/Projects/reservation/src/reservation.txt");
+
+char num[50],id[50],depart[50],destination[50],compagnie[50],date_aller[50],date_retour[50],classe[50];
+int nb_voy;
+float prix;
+FILE* f2=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt","r");
+FILE* f3=fopen("/home/malekbouslah/Projects/reservation/src/tempo1.txt","a+");
+
+if (f2!=NULL)
+{
+	while(fscanf(f2,"%s %s %s %s %s %s %s %s %d %f\n",num,id,depart,destination,compagnie,date_aller,date_retour,classe,&nb_voy,&prix)!=EOF)
+	{
+		if(strcmp(numvol,num)==0)
+		{
+		fprintf(f3,"%s %s %s %s %s %s %s %s %d %f\n",num,id,depart,destination,compagnie,date_aller,date_retour,classem,nbvoy,prixm);
+		}	
+		else
+		fprintf(f3,"%s %s %s %s %s %s %s %s %d %f\n",num,id,depart,destination,compagnie,date_aller,date_retour,classe,nb_voy,prix);
+	}
+}
+fclose(f3);
+fclose(f2);
+rename("/home/malekbouslah/Projects/reservation/src/tempo1.txt","/home/malekbouslah/Projects/reservation/src/volreserver.txt");
+
 }

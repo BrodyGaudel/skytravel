@@ -155,7 +155,7 @@ int nb_voy;
 float prix;
 f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt","r");
 
-if(f==NULL)
+if(f1==NULL)
 	{
 		return;
 	}

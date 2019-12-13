@@ -33,3 +33,5 @@ float calcul_prix_vol(float tarif,int nbr_voy);
 void enregistrer_vol(char num[],char id[],char j[],char m[],char a[],float prix);
 int numero_vol(char depart[],char destination[],char compagnie[],char date_aller[],char date_retour[],char classe[]);
 void modifier_nb_place(int numvol,int nb_place);
+int cherchernombrevoy(char depart[],char destination[],char compagnie[],char date_aller[],char date_retour[],char classe[]);
+void modifierclasseprix(char numvol[],char classem[],int nbvoy,float prixm);
