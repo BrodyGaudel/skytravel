@@ -1,0 +1,14 @@
+GtkWidget *window2;
+  GtkWidget *window3;
+*/declaration/*  
+window2 = create_window2 ();
+  gtk_widget_show (window2);
+  window3 = create_window3 ();
+  gtk_widget_show (window3); 
+********* edheya fel main 
+g_signal_connect ((gpointer) button2, "clicked",
+                    G_CALLBACK (on_button2_clicked),
+                    NULL); 
+******
+GtkWidget *button2;
+******************* fel interface.c
