@@ -1,0 +1,9 @@
+1 tunisair tunis alger 1/2/2019 10/2/2019 economique 300.000000 45 
+2 tunisair tunis alger 1/2/2019 10/2/2019 business 400.000000 19 
+3 tunisair tunis alger 1/2/2019 10/2/2019 first 500.000000 9 
+4 airfrance tunis alger 1/2/2019 10/2/2019 economique 350.000000 30 
+5 airfrance tunis alger 1/2/2019 3/2/2019 economique 350.000000 25 
+6 airfrance tunis paris 1/2/2019 2/2/2019 economique 800.000000 40 
+7 emirates tunis paris 1/2/2019 3/2/2019 economique 850.000000 30 
+8 airfrance tunis paris 1/2/2019 3/2/2019 economique 750.000000 25 
+9 emirates tunis paris 3/2/2019 3/2/2019 economique 850.000000 35 
