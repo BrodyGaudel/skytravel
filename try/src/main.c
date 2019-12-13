@@ -27,13 +27,14 @@ main (int argc, char *argv[])
   gtk_init (&argc, &argv);
 
   add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
+add_pixmap_directory("pixmaps");
 
   /*
    * The following code was added by Glade to create one of each component
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  windowAjout = create_windowAjout ();
+  windowAjout = create_AGwindowAjout ();
   gtk_widget_show (windowAjout);
 
   gtk_main ();
