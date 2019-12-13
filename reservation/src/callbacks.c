@@ -17,9 +17,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+//***********************partie malek********************************************************************
 
 void
-on_button1_clicked                     (GtkWidget       *objet_graphique,
+on_button1malek_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *reservations;
@@ -30,7 +31,7 @@ GtkWidget *output;
 char id[50];
 
 affichage=lookup_widget(objet_graphique,"affichage");
-input=lookup_widget(objet_graphique,"label67");
+input=lookup_widget(objet_graphique,"label67malek");
 strcpy(id,gtk_label_get_text(GTK_LABEL(input)));
 
 
@@ -40,17 +41,17 @@ gtk_widget_hide(reservations);
 affichage=create_affichage();
 
 gtk_widget_show(affichage);
-output=lookup_widget(affichage,"label68");
+output=lookup_widget(affichage,"label68malek");
 gtk_label_set_text(GTK_LABEL(output),id);
 
-treeview1=lookup_widget(affichage,"treeview1");
+treeview1=lookup_widget(affichage,"treeview1malek");
 afficher_res(treeview1,id);
 
 }
 
 
 void
-on_button11_clicked                    (GtkWidget       *objet_graphique,
+on_button11malek_clicked               (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *reservations;
@@ -64,11 +65,11 @@ char id[50];
 char num[20];
 reservations=lookup_widget(objet_graphique,"reservations");
 affichage=lookup_widget(objet_graphique,"affichage");
-input1=lookup_widget(objet_graphique,"label68");
+input1=lookup_widget(objet_graphique,"label68malek");
 
 strcpy(id,gtk_label_get_text(GTK_LABEL(input1)));
 
-input=lookup_widget(objet_graphique,"entry8");
+input=lookup_widget(objet_graphique,"entry8malek");
 strcpy(num,gtk_entry_get_text(GTK_ENTRY(input)));
 suppres(num);
 
@@ -79,14 +80,16 @@ affichage=create_affichage();
 
 gtk_widget_show(affichage);
 
-output=lookup_widget(affichage,"label68");
+output=lookup_widget(affichage,"label68malek");
 gtk_label_set_text(GTK_LABEL(output),id);
-treeview1=lookup_widget(affichage,"treeview1");
+treeview1=lookup_widget(affichage,"treeview1malek");
 afficher_res(treeview1,id);
 }
 
+
+
 void
-on_button2_clicked                     (GtkWidget       *objet_graphique,
+on_button2malek_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *reservations;
@@ -99,12 +102,12 @@ char id[50];
 char pres[50];
 
 reservations=lookup_widget(objet_graphique,"reservations");
-input=lookup_widget(objet_graphique,"label67");
+input=lookup_widget(objet_graphique,"label67malek");
 strcpy(id,gtk_label_get_text(GTK_LABEL(input)));
 
-combobox10=lookup_widget(objet_graphique,"combobox10");
+combobox10=lookup_widget(objet_graphique,"combobox10malek");
 strcpy(pres,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox10)));
-output1=lookup_widget(objet_graphique,"label3");
+output1=lookup_widget(objet_graphique,"label3malek");
 
 if(strcmp(pres,"\0")==0)
 {
@@ -118,16 +121,17 @@ vol=lookup_widget(objet_graphique,"vol");
 vol=create_vol();
 
 gtk_widget_show(vol);
-output=lookup_widget(vol,"label70");
+output=lookup_widget(vol,"label70malek");
 gtk_label_set_text(GTK_LABEL(output),id);
 }
 }
 
+
 void
-on_button5_clicked                     (GtkWidget       *objet_graphique,
+on_button5malek_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
- GtkWidget *affichage;
+GtkWidget *affichage;
  GtkWidget *reservations;
 
  affichage=lookup_widget(objet_graphique,"affichage");
@@ -139,7 +143,7 @@ on_button5_clicked                     (GtkWidget       *objet_graphique,
 
 
 void
-on_button8_clicked                     (GtkWidget       *objet_graphique,
+on_button8malek_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 int test,i,j,n,m;
@@ -157,11 +161,11 @@ GtkWidget *output3;
 
 
 
-input1=lookup_widget(objet_graphique,"entry5");
-input2=lookup_widget(objet_graphique,"entry7");
-output3=lookup_widget(objet_graphique,"label28");
-combobox7=lookup_widget(objet_graphique,"combobox7");
-combobox9=lookup_widget(objet_graphique,"combobox9");
+input1=lookup_widget(objet_graphique,"entry5malek");
+input2=lookup_widget(objet_graphique,"entry7malek");
+output3=lookup_widget(objet_graphique,"label28malek");
+combobox7=lookup_widget(objet_graphique,"combobox7malek");
+combobox9=lookup_widget(objet_graphique,"combobox9malek");
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(retour,gtk_entry_get_text(GTK_ENTRY(input2)));
 
@@ -177,21 +181,14 @@ n=tableau_compagnie_disponible(compagnie,aller,retour);
 for(i=0;i<n;i++)
 {
 gtk_combo_box_append_text(GTK_COMBO_BOX(combobox7),_(compagnie[i]));
-}/*
-combobox7=lookup_widget(objet_graphique,"combobox7");
-strcpy(comp,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox7)));
-m=tableau_date_disponible(date,aller,retour,comp);
-for(j=0;j<m;j++)
-{
-gtk_combo_box_append_text(GTK_COMBO_BOX(combobox9),_(date[j]));
-}*/
-}
 }
 
+}
+}
 
 
 void
-on_valider_clicked                     (GtkWidget       *objet_graphique,
+on_validermalek_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 int test,j,m;
@@ -209,11 +206,11 @@ GtkWidget *combobox9;
 
 
 
-input1=lookup_widget(objet_graphique,"entry5");
-input2=lookup_widget(objet_graphique,"entry7");
+input1=lookup_widget(objet_graphique,"entry5malek");
+input2=lookup_widget(objet_graphique,"entry7malek");
 
-combobox7=lookup_widget(objet_graphique,"combobox7");
-combobox9=lookup_widget(objet_graphique,"combobox9");
+combobox7=lookup_widget(objet_graphique,"combobox7malek");
+combobox9=lookup_widget(objet_graphique,"combobox9malek");
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(retour,gtk_entry_get_text(GTK_ENTRY(input2)));
 
@@ -222,7 +219,6 @@ test=cherchervol(aller,retour);
 if(test==1)
 {
 
-//combobox7=lookup_widget(objet_graphique,"combobox7");
 strcpy(comp,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox7)));
 m=tableau_date_disponible(date_aller,aller,retour,comp);
 for(j=0;j<m;j++)
@@ -234,7 +230,7 @@ gtk_combo_box_append_text(GTK_COMBO_BOX(combobox9),_(date_aller[j]));
 
 
 void
-on_valider_date_clicked                (GtkWidget       *objet_graphique,
+on_valider_datemalek_clicked           (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 int test,j,m;
@@ -252,11 +248,11 @@ GtkWidget *combobox11;
 
 
 
-input1=lookup_widget(objet_graphique,"entry5");
-input2=lookup_widget(objet_graphique,"entry7");
-combobox7=lookup_widget(objet_graphique,"combobox7");
-combobox9=lookup_widget(objet_graphique,"combobox9");
-combobox11=lookup_widget(objet_graphique,"combobox11");
+input1=lookup_widget(objet_graphique,"entry5malek");
+input2=lookup_widget(objet_graphique,"entry7malek");
+combobox7=lookup_widget(objet_graphique,"combobox7malek");
+combobox9=lookup_widget(objet_graphique,"combobox9malek");
+combobox11=lookup_widget(objet_graphique,"combobox11malek");
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(retour,gtk_entry_get_text(GTK_ENTRY(input2)));
 
@@ -277,10 +273,10 @@ gtk_combo_box_append_text(GTK_COMBO_BOX(combobox11),_(date_retour[j]));
 
 
 void
-on_retour_vol_clicked                  (GtkWidget       *objet_graphique,
+on_retour_volmalek_clicked             (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
- GtkWidget *vol;
+GtkWidget *vol;
  GtkWidget *reservations;
 
  vol=lookup_widget(objet_graphique,"vol");
@@ -292,7 +288,7 @@ on_retour_vol_clicked                  (GtkWidget       *objet_graphique,
 
 
 void
-on_devis_vol_clicked                   (GtkWidget       *objet_graphique,
+on_devis_volmalek_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *vol;
@@ -322,21 +318,21 @@ char ch[100];
 char classe[50];
 
 
-input1=lookup_widget(objet_graphique,"entry5");
-input2=lookup_widget(objet_graphique,"entry7");
-output2=lookup_widget(objet_graphique,"label65");
+input1=lookup_widget(objet_graphique,"entry5malek");
+input2=lookup_widget(objet_graphique,"entry7malek");
+output2=lookup_widget(objet_graphique,"label65malek");
 
-combobox7=lookup_widget(objet_graphique,"combobox7");
-combobox9=lookup_widget(objet_graphique,"combobox9");
-combobox11=lookup_widget(objet_graphique,"combobox11");
+combobox7=lookup_widget(objet_graphique,"combobox7malek");
+combobox9=lookup_widget(objet_graphique,"combobox9malek");
+combobox11=lookup_widget(objet_graphique,"combobox11malek");
 
-spinbuttonadulte=lookup_widget(objet_graphique,"spinbuttonadulte");
-spinbuttonenfant=lookup_widget(objet_graphique,"spinbuttonenfant");
-spinbuttonbebe=lookup_widget(objet_graphique,"spinbuttonbebe");
+spinbuttonadulte=lookup_widget(objet_graphique,"spinbuttonadultemalek");
+spinbuttonenfant=lookup_widget(objet_graphique,"spinbuttonenfantmalek");
+spinbuttonbebe=lookup_widget(objet_graphique,"spinbuttonbebemalek");
 
-chec1=lookup_widget(objet_graphique,"economique");
-chec2=lookup_widget(objet_graphique,"business");
-chec3=lookup_widget(objet_graphique,"first");
+chec1=lookup_widget(objet_graphique,"economiquemalek");
+chec2=lookup_widget(objet_graphique,"businessmalek");
+chec3=lookup_widget(objet_graphique,"firstmalek");
 
 
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input1)));
@@ -374,7 +370,7 @@ total=calcul_prix_vol(tarif,nbr_voy);
 sprintf(prix,"%f",total);
 
 strcat(ch,prix);
-output1=lookup_widget(objet_graphique,"label62");
+output1=lookup_widget(objet_graphique,"label62malek");
 gtk_label_set_text(GTK_LABEL(output1),ch);
 }
 }
@@ -382,7 +378,7 @@ gtk_label_set_text(GTK_LABEL(output1),ch);
 
 
 void
-on_reessayervol_clicked                (GtkWidget       *objet_graphique,
+on_reessayervolmalek_clicked           (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *vol;
@@ -390,21 +386,21 @@ GtkWidget *input;
 GtkWidget *output;
 char id[50];
 
-input=lookup_widget(objet_graphique,"label70");
+input=lookup_widget(objet_graphique,"label70malek");
 strcpy(id,gtk_label_get_text(GTK_LABEL(input)));
 vol=lookup_widget(objet_graphique,"vol");
 gtk_widget_hide(vol);
 
 vol=create_vol();
 gtk_widget_show(vol);
-output=lookup_widget(vol,"label70");
+output=lookup_widget(vol,"label70malek");
 gtk_label_set_text(GTK_LABEL(output),id);
 
 }
 
 
 void
-on_enregistrementvol_clicked           (GtkWidget       *objet_graphique,
+on_enregistrementvolmalek_clicked      (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *vol;
@@ -412,8 +408,8 @@ GtkWidget *input;
 GtkWidget *output2;
 
 vol=lookup_widget(objet_graphique,"vol");
-input=lookup_widget(objet_graphique,"label62");
-output2=lookup_widget(objet_graphique,"label70");
+input=lookup_widget(objet_graphique,"label62malek");
+output2=lookup_widget(objet_graphique,"label70malek");
 
 char prix[50];
 float total;
@@ -447,7 +443,7 @@ sprintf(m,"%d",mois);
 sprintf(ann,"%d",an);
 strcpy(id,gtk_label_get_text(GTK_LABEL(output2)));
 
-enregistrer_vol(num_vol,id,j,m,ann,total);
+//enregistrer_vol(num_vol,id,j,m,ann,total);
 
 
 
@@ -475,22 +471,22 @@ int numvol;
 
 
 
-input1=lookup_widget(objet_graphique,"entry5");
-input2=lookup_widget(objet_graphique,"entry7");
-output=lookup_widget(objet_graphique,"label65");
+input1=lookup_widget(objet_graphique,"entry5malek");
+input2=lookup_widget(objet_graphique,"entry7malek");
+output=lookup_widget(objet_graphique,"label65malek");
 
-chec1=lookup_widget(objet_graphique,"economique");
-chec2=lookup_widget(objet_graphique,"business");
-chec3=lookup_widget(objet_graphique,"first");
+chec1=lookup_widget(objet_graphique,"economiquemalek");
+chec2=lookup_widget(objet_graphique,"businessmalek");
+chec3=lookup_widget(objet_graphique,"firstmalek");
 
 
-combobox7=lookup_widget(objet_graphique,"combobox7");
-combobox9=lookup_widget(objet_graphique,"combobox9");
-combobox11=lookup_widget(objet_graphique,"combobox11");
+combobox7=lookup_widget(objet_graphique,"combobox7malek");
+combobox9=lookup_widget(objet_graphique,"combobox9malek");
+combobox11=lookup_widget(objet_graphique,"combobox11malek");
 
-spinbuttonadulte=lookup_widget(objet_graphique,"spinbuttonadulte");
-spinbuttonenfant=lookup_widget(objet_graphique,"spinbuttonenfant");
-spinbuttonbebe=lookup_widget(objet_graphique,"spinbuttonbebe");
+spinbuttonadulte=lookup_widget(objet_graphique,"spinbuttonadultemalek");
+spinbuttonenfant=lookup_widget(objet_graphique,"spinbuttonenfantmalek");
+spinbuttonbebe=lookup_widget(objet_graphique,"spinbuttonbebemalek");
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(retour,gtk_entry_get_text(GTK_ENTRY(input2)));
 strcpy(comp,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox7)));
@@ -518,9 +514,12 @@ if (etat3)
 
 
 nbr_voy=a+e+b;
+if(nbr_voy>cherchernombrevoy(aller,retour,comp,da,dr,classe))
+	gtk_label_set_text(GTK_LABEL(output),"nombre de place indisponnible!!");
+else
+{	gtk_label_set_text(GTK_LABEL(output),"vol enregistré avec succès!!");
 
-
-
+enregistrer_vol(num_vol,id,j,m,ann,total);
 FILE *f1;
 f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt", "a+");
 		if (f1==NULL)
@@ -531,16 +530,16 @@ f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt", "a+");
 	fprintf(f1,"%s %s %s %s %s %s %s %s %d %f\n",num_vol,id,aller,retour,comp,da,dr,classe,nbr_voy,total );
 
 	 fclose(f1);
-gtk_label_set_text(GTK_LABEL(output),"vol enregistré avec succès!!");
+
 numvol=numero_vol(aller,retour,comp,da,dr,classe);
 modifier_nb_place(numvol,nbr_voy);
+}
 }
 
 
 
-
 void
-on_modifiervol_clicked                 (GtkWidget       *objet_graphique,
+on_modifiervolmalek_clicked            (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget *affichage;
@@ -561,25 +560,25 @@ char num_vol[50];char iden[50];char aller[50];char retour[50];char comp[50];char
 
 
 affichage=lookup_widget(objet_graphique,"affichage");
-input1=lookup_widget(objet_graphique,"label68");
+input1=lookup_widget(objet_graphique,"label68malek");
 
 strcpy(id,gtk_label_get_text(GTK_LABEL(input1)));
 
-input=lookup_widget(objet_graphique,"entry8");
+input=lookup_widget(objet_graphique,"entry8malek");
 strcpy(num,gtk_entry_get_text(GTK_ENTRY(input)));
 gtk_widget_hide(affichage);
 modificationvol=create_modificationvol();
 gtk_widget_show(modificationvol);
-output=lookup_widget(modificationvol,"label73");
+output=lookup_widget(modificationvol,"label73malek");
 gtk_label_set_text(GTK_LABEL(output),id);
-output1=lookup_widget(modificationvol,"entry9");
+output1=lookup_widget(modificationvol,"entry9malek");
 gtk_entry_set_text(GTK_ENTRY(output1),num);
 
-output2=lookup_widget(modificationvol,"entry10");
-output3=lookup_widget(modificationvol,"entry11");
-output4=lookup_widget(modificationvol,"entry12");
-output5=lookup_widget(modificationvol,"entry13");
-output6=lookup_widget(modificationvol,"entry14");
+output2=lookup_widget(modificationvol,"entry10malek");
+output3=lookup_widget(modificationvol,"entry11malek");
+output4=lookup_widget(modificationvol,"entry12malek");
+output5=lookup_widget(modificationvol,"entry13malek");
+output6=lookup_widget(modificationvol,"entry14malek");
 
 FILE *f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt","r");
 if (f1!=NULL)
@@ -602,9 +601,8 @@ fclose(f1);
 }
 
 
-
 void
-on_retourmodif_clicked                 (GtkWidget       *objet_graphique,
+on_retourmodifmalek_clicked            (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
  GtkWidget *modificationvol;
@@ -617,16 +615,16 @@ on_retourmodif_clicked                 (GtkWidget       *objet_graphique,
 
  
  modificationvol=lookup_widget(objet_graphique,"modificationvol");
- input=lookup_widget(objet_graphique,"label73");
+ input=lookup_widget(objet_graphique,"label73malek");
  strcpy(id,gtk_label_get_text(GTK_LABEL(input)));
  
  gtk_widget_destroy(modificationvol);
  affichage=create_affichage();
 
  gtk_widget_show(affichage);
- output=lookup_widget(affichage,"label68");
+ output=lookup_widget(affichage,"label68malek");
  gtk_label_set_text(GTK_LABEL(output),id);
- treeview1=lookup_widget(affichage,"treeview1");
+ treeview1=lookup_widget(affichage,"treeview1malek");
  afficher_res(treeview1,id);
 
  
@@ -634,7 +632,7 @@ on_retourmodif_clicked                 (GtkWidget       *objet_graphique,
 
 
 void
-on_enregistrermodif_clicked            (GtkWidget       *objet_graphique,
+on_enregistrermodifmalek_clicked       (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget modificationvol;
@@ -663,27 +661,28 @@ char comp[100];
 char da[100];
 char dr[100];
 char prix[50];
-char ch[100];
+//char ch[100];
 char classe[50];
 char id[50];
+int numvol;
 
 
-input1=lookup_widget(objet_graphique,"entry9");
-input2=lookup_widget(objet_graphique,"entry10");
-input3=lookup_widget(objet_graphique,"entry11");
-input4=lookup_widget(objet_graphique,"entry12");
-input5=lookup_widget(objet_graphique,"entry13");
-input6=lookup_widget(objet_graphique,"entry14");
-output1=lookup_widget(objet_graphique,"label85");
-output2=lookup_widget(objet_graphique,"label84");
+input1=lookup_widget(objet_graphique,"entry9malek");
+input2=lookup_widget(objet_graphique,"entry10malek");
+input3=lookup_widget(objet_graphique,"entry11malek");
+input4=lookup_widget(objet_graphique,"entry12malek");
+input5=lookup_widget(objet_graphique,"entry13malek");
+input6=lookup_widget(objet_graphique,"entry14malek");
+output1=lookup_widget(objet_graphique,"label85malek");
+output2=lookup_widget(objet_graphique,"label84malek");
 
-chec1=lookup_widget(objet_graphique,"checkbuttoneconomique");
-chec2=lookup_widget(objet_graphique,"checkbuttonbusiness");
-chec3=lookup_widget(objet_graphique,"checkbuttonfirst");
+chec1=lookup_widget(objet_graphique,"checkbuttoneconomiquemalek");
+chec2=lookup_widget(objet_graphique,"checkbuttonbusinessmalek");
+chec3=lookup_widget(objet_graphique,"checkbuttonfirstmalek");
 
-spinbutton1adulte=lookup_widget(objet_graphique,"spinbutton1adulte");
-spinbutton2enfant=lookup_widget(objet_graphique,"spinbutton2enfant");
-spinbutton3bebe=lookup_widget(objet_graphique,"spinbutton3bebe");
+spinbutton1adulte=lookup_widget(objet_graphique,"spinbutton1adultemalek");
+spinbutton2enfant=lookup_widget(objet_graphique,"spinbutton2enfantmalek");
+spinbutton3bebe=lookup_widget(objet_graphique,"spinbutton3bebemalek");
 
 strcpy(num,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input2)));
@@ -691,7 +690,7 @@ strcpy(retour,gtk_entry_get_text(GTK_ENTRY(input3)));
 strcpy(comp,gtk_entry_get_text(GTK_ENTRY(input4)));
 strcpy(da,gtk_entry_get_text(GTK_ENTRY(input5)));
 strcpy(dr,gtk_entry_get_text(GTK_ENTRY(input6)));
-input7=lookup_widget(objet_graphique,"label73");
+input7=lookup_widget(objet_graphique,"label73malek");
 strcpy(id,gtk_label_get_text(GTK_LABEL(input7)));
 
 a=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spinbutton1adulte));
@@ -709,21 +708,24 @@ if (etat2)
 	strcpy(classe,"business");
 if (etat3)
 	strcpy(classe,"first");
-
+/*
 suppres(num);
 reservation r;
 FILE *f=fopen("/home/malekbouslah/Projects/reservation/src/reservation.txt","r");
-int nume=1;int numvol;
-char num_vol[50];char j[50];char m[50];char ann[50];
+//int nume=1;
+int numvol;
+char num_vol[50];
+char j[50];char m[50];char ann[50];*/
 
 strcpy(prix,gtk_label_get_text(GTK_LABEL(output2)));
 total=atof(prix);
-if(f!=NULL)
+/*if(f!=NULL)
 {
 while (fscanf(f,"%s %s %s %s %s %s %f  \n",r.num_res,r.identifiant,r.date_reservation.jour,r.date_reservation.mois,r.date_reservation.annee,r.type,&r.devis)!=EOF)
 {
-nume=atof(r.num_res)+1;
-sprintf(num_vol,"%d",nume);
+//nume=atof(r.num_res)+1;
+//sprintf(num_vol,"%d",nume);
+strcpy(num_vol,num);
 }
 }
   int day, mois, an;
@@ -738,10 +740,10 @@ sprintf(j,"%d",day);
 sprintf(m,"%d",mois);
 sprintf(ann,"%d",an);
 
-enregistrer_vol(num_vol,id,j,m,ann,total);
+enregistrer_vol(num,id,j,m,ann,total);*/
 
 nbr_voy=a+e+b;
-
+/*
 FILE *f1;
 f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt", "a+");
 		if (f1==NULL)
@@ -749,9 +751,10 @@ f1=fopen("/home/malekbouslah/Projects/reservation/src/volreserver.txt", "a+");
 		return;
 		}
 
-	fprintf(f1,"%s %s %s %s %s %s %s %s %d %f\n",num_vol,id,aller,retour,comp,da,dr,classe,nbr_voy,total );
+	fprintf(f1,"%s %s %s %s %s %s %s %s %d %f\n",num,id,aller,retour,comp,da,dr,classe,nbr_voy,total );
 
-	 fclose(f1);
+	 fclose(f1);*/
+modifierclasseprix(num,classe,nbr_voy,total);
 gtk_label_set_text(GTK_LABEL(output1),"modification enregistré avec succès!!");
 numvol=numero_vol(aller,retour,comp,da,dr,classe);
 modifier_nb_place(numvol,nbr_voy);
@@ -760,7 +763,7 @@ modifier_nb_place(numvol,nbr_voy);
 
 
 void
-on_devismodif_clicked                  (GtkWidget       *objet_graphique,
+on_devismodifmalek_clicked             (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 GtkWidget modificationvol;
@@ -791,20 +794,20 @@ char ch[100];
 char classe[50];
 
 
-input1=lookup_widget(objet_graphique,"entry9");
-input2=lookup_widget(objet_graphique,"entry10");
-input3=lookup_widget(objet_graphique,"entry11");
-input4=lookup_widget(objet_graphique,"entry12");
-input5=lookup_widget(objet_graphique,"entry13");
-input6=lookup_widget(objet_graphique,"entry14");
+input1=lookup_widget(objet_graphique,"entry9malek");
+input2=lookup_widget(objet_graphique,"entry10malek");
+input3=lookup_widget(objet_graphique,"entry11malek");
+input4=lookup_widget(objet_graphique,"entry12malek");
+input5=lookup_widget(objet_graphique,"entry13malek");
+input6=lookup_widget(objet_graphique,"entry14malek");
 
-chec1=lookup_widget(objet_graphique,"checkbuttoneconomique");
-chec2=lookup_widget(objet_graphique,"checkbuttonbusiness");
-chec3=lookup_widget(objet_graphique,"checkbuttonfirst");
+chec1=lookup_widget(objet_graphique,"checkbuttoneconomiquemalek");
+chec2=lookup_widget(objet_graphique,"checkbuttonbusinessmalek");
+chec3=lookup_widget(objet_graphique,"checkbuttonfirstmalek");
 
-spinbutton1adulte=lookup_widget(objet_graphique,"spinbutton1adulte");
-spinbutton2enfant=lookup_widget(objet_graphique,"spinbutton2enfant");
-spinbutton3bebe=lookup_widget(objet_graphique,"spinbutton3bebe");
+spinbutton1adulte=lookup_widget(objet_graphique,"spinbutton1adultemalek");
+spinbutton2enfant=lookup_widget(objet_graphique,"spinbutton2enfantmalek");
+spinbutton3bebe=lookup_widget(objet_graphique,"spinbutton3bebemalek");
 
 strcpy(num,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(aller,gtk_entry_get_text(GTK_ENTRY(input2)));
@@ -835,8 +838,8 @@ total=calcul_prix_vol(tarif,nbr_voy);
 sprintf(prix,"%f",total);
 
 strcat(ch,prix);
-output1=lookup_widget(objet_graphique,"label84");
-gtk_label_set_text(GTK_LABEL(output1),ch);
+output1=lookup_widget(objet_graphique,"label84malek");
+gtk_label_set_text(GTK_LABEL(output1),prix);
 
 
 }
