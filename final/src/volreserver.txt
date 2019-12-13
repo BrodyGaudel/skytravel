@@ -1,0 +1,7 @@
+5 000 tunis alger tunisair 1/2/2019 10/2/2019 economique 1 300.000000
+6 000 tunis alger airfrance 1/2/2019 10/2/2019 economique 2 700.000000
+7 000 tunis alger tunisair 1/2/2019 10/2/2019 economique 2 600.000000
+8 001 tunis alger tunisair 1/2/2019 10/2/2019 business 2 800.000000
+9 001 tunis paris emirates 1/2/2019 3/2/2019 economique 3 2550.000000
+9 malek01 tunis alger tunisair 1/2/2019 10/2/2019 economique 2 600.000000
+10 malek01 tunis alger tunisair 1/2/2019 10/2/2019 economique 2 600.000000
